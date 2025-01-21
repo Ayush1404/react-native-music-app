@@ -5,8 +5,10 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  View,
 } from 'react-native';
 import { addTrack, setUpPlayer } from '../musicPlayerService';
+import MusicPlayer from './screens/MusicPlayer';
 
 
 
@@ -32,12 +34,10 @@ function App(): React.JSX.Element {
   )
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <Text>
-        Hello
-      </Text>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <StatusBar barStyle={"light-content"}/>
+      <MusicPlayer />
+    </View>
   );
 }
 
